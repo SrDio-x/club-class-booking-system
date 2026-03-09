@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reservar Clase | Country Club Ejecutivos</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="header">
+    <h1>Country Club Ejecutivos</h1>
+</header>
+
+<div class="form-wrapper">
+
+<div class="form-container">
+
+<h2>Programar clase personalizada</h2>
+<p class="subtitle">
+Reserva tus sesiones con tu entrenador preferido
+</p>
+
+<div id="mensaje-respuesta"></div>
+
+<form id="formulario-reserva">
+
+<label>Número de acción</label>
+<input type="text" id="numero_accion" required>
+
+<label>Paquete de clases</label>
+<select id="paquete_clases" required>
+<option value="">Seleccione</option>
+<option value="2">2 clases</option>
+<option value="4">4 clases</option>
+<option value="6">6 clases</option>
+<option value="8">8 clases</option>
+</select>
+
+<label>Profesor</label>
+<select id="profesor" required>
+<option value="">Seleccione</option>
+<option value="11111111">Carlos Ruiz</option>
+<option value="22222222">Laura Gómez</option>
+<option value="33333333">Andrés Torres</option>
+</select>
+
+<label>Horario preferido</label>
+<textarea
+id="horario_preferencia"
+rows="3"
+placeholder="Ej: lunes y miércoles a las 7am"
+required></textarea>
+
+<label>¿Quién paga?</label>
+<select id="pagador" required>
+<option value="">Seleccione</option>
+<option value="Socio">Socio</option>
+<option value="Empresa">Empresa</option>
+<option value="Tercero">Tercero</option>
+</select>
+
+<button type="submit" id="btn-reservar">
+Reservar clases
+</button>
+
+</form>
+
+</div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
