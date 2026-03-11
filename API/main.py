@@ -5,14 +5,19 @@ from datetime import date, timedelta, datetime
 from typing import Optional
 import uvicorn
 
+import os
+from dotenv import load_dotenv
+
 app = FastAPI()
 
 # ─────────────────────────────────────
 # CONFIG SUPABASE
 # ─────────────────────────────────────
 
-SUPABASE_URL = "https://odrnuepoyhewmwdhjzuj.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9kcm51ZXBveWhld213ZGhqenVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwMjExMTQsImV4cCI6MjA4NzU5NzExNH0.jEbFDUXwVr71vfvotTShEhEkG74T65gDvw9e6Xsrir0"
+load_dotenv()
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
